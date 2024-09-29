@@ -1,28 +1,22 @@
-/* 
-// Metacrafters - Beginning Javascript
-//
-// This is a javascript playground for testing your javascript code!
-// When you are ready to test, simply right click and select "Run Code"
-// to see the result print below. If you have more then one snippet of code,
-// you can highlight the code you want to test, and then right click and select "Run Code"
-*/
+# Hello World
 
-// Enter your code below this line
-/*
-Assessment Requirements
-1. Create a variable that can hold a number of NFT's. What type of variable might this be?
-2. Create an object inside your mintNFT function that will hold the metadata for your NFTs. 
-   The metadata values will be passed to the function as parameters. When the NFT is ready, 
-   you will store it in the variable you created in step 1
-3. Your listNFTs() function will print all of your NFTs metadata to the console (i.e. console.log("Name: " + someNFT.name))
-4. For good measure, getTotalSupply() should return the number of NFT's you have created
-*/
+This code represents a simple NFT system that mints unique digital assets with metadata, stores them in an array, and provides functions to display and track the total supply of NFTs.
 
-// create a variable to hold your NFT's
+## Description
+
+This code defines a simple system for minting, storing, and listing NFTs (Non-Fungible Tokens) in JavaScript. Each NFT contains basic metadata like a name, eye color, shirt type, and bling, which are stored in an array. The program also includes functions to mint new NFTs, display their metadata, and print the total number of NFTs created.
+
+## Getting Started
+
+### Executing program
+
+To run this program, you can use Remix, an online Java Script Compiler. To get started, go to the Remix website at [https://remix.ethereum.org/](https://www.programiz.com/javascript/online-compiler/).
+
+Write your code on this website and run your code.
+
+```javascript
 const NFTs = [];
-// this function will take in some values as parameters, create an
-// NFT object using the parameters passed to it for its metadata,
-// and store it in the variable above.
+
 function mintNFT(name, eyecolor, shirtType, bling) {
   const NFT = {
     name: name,
@@ -34,8 +28,6 @@ function mintNFT(name, eyecolor, shirtType, bling) {
   console.log("Minted \t" + name);
 }
 
-// create a "loop" that will go through an "array" of NFT's
-// and print their metadata with console.log()
 function listNFTs() {
   for (let i = 0; i < NFTs.length; i++) {
     console.log("\nID: \t\t" + (i + 1));
@@ -45,15 +37,29 @@ function listNFTs() {
     console.log("Bling: \t\t" +NFTs[i].bling);
   }
 }
-// print the total number of NFTs we have minted to the console
+
 function getTotalSupply() {
   console.log("\n", +NFTs.length);
 }
 
-// call your functions below this line
+
 mintNFT("Tushar", "black", "shirt full sleeve", " Gold bracelet");
 mintNFT("Deepesh", "grey", "Hoodie", "Gold chain");
 mintNFT("Harsh", "blue", "Jacket", "Ear ring");
 mintNFT("Amit", "brown", "Hoodie", "Silver bracelet");
 listNFTs();
 getTotalSupply();
+
+```
+
+
+
+## Authors
+
+Tushar Srivastav 
+
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
